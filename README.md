@@ -2,7 +2,7 @@
 
 [日本語](./README.ja.md)
 
-[![Android XR Starter Sample demo video on YouTube](https://img.youtube.com/vi/52wZrd1oV24/maxresdefault.jpg)](https://youtu.be/52wZrd1oV24)
+[![Android XR Starter Sample demo video](https://img.youtube.com/vi/52wZrd1oV24/maxresdefault.jpg)](https://youtu.be/52wZrd1oV24)
 
 ▶ [Watch the demo video on YouTube](https://youtu.be/52wZrd1oV24)
 
