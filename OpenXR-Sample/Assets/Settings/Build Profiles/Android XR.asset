@@ -1017,5 +1017,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEditor.dll::UnityEditor.Build.Profile.BuildProfileQualitySettings
   m_DefaultQualityLevel: Android XR (Build Profile)
   m_QualityLevels:
-  - Mobile
   - Android XR (Build Profile)
