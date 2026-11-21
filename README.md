@@ -2,6 +2,10 @@
 
 [日本語](./README.ja.md)
 
+[![Android XR Starter Sample demo video on YouTube](https://img.youtube.com/vi/52wZrd1oV24/maxresdefault.jpg)](https://youtu.be/52wZrd1oV24)
+
+▶ [Watch the demo video on YouTube](https://youtu.be/52wZrd1oV24)
+
 A Unity starter project for building Android XR apps for XREAL AURA. The three sample scenes show how to render a 3D object, manipulate it with hand tracking, and add an interactive UI in 3D space. The project uses OpenXR, XR Interaction Toolkit, and the Universal Render Pipeline (URP).
 
 ## Sample scenes

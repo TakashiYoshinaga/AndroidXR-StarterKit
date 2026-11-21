@@ -2,6 +2,10 @@
 
 [English](./README.md)
 
+[![Android XR スターターサンプルのデモ動画（YouTube）](https://img.youtube.com/vi/52wZrd1oV24/maxresdefault.jpg)](https://youtu.be/52wZrd1oV24)
+
+▶ [デモ動画を YouTube で見る](https://youtu.be/52wZrd1oV24)
+
 XREAL AURA 向けの Android XR アプリ開発を始めるための Unity プロジェクトです。3 つのサンプルシーンで、3D オブジェクトの表示、ハンドトラッキングによる操作、空間 UI の実装を試せます。OpenXR、XR Interaction Toolkit、Universal Render Pipeline（URP）を使用しています。
 
 ## サンプルシーン
