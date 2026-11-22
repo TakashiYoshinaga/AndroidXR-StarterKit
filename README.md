@@ -2,11 +2,12 @@
 
 [日本語](./README.ja.md)
 
-[![Android XR Starter Sample demo video](https://img.youtube.com/vi/52wZrd1oV24/maxresdefault.jpg)](https://youtu.be/52wZrd1oV24)
+| ver.1: scenes 0–2 | ver.2: scenes 3–4 |
+| --- | --- |
+| [![Android XR Starter Sample demo video](https://img.youtube.com/vi/52wZrd1oV24/maxresdefault.jpg)](https://youtu.be/52wZrd1oV24) | [![Android XR Starter Sample ver.2 demo video](https://img.youtube.com/vi/tw9fotn9uPU/maxresdefault.jpg)](https://youtu.be/tw9fotn9uPU) |
+| ▶ [Watch the demo video on YouTube](https://youtu.be/52wZrd1oV24) | ▶ [Watch the demo video on YouTube](https://youtu.be/tw9fotn9uPU) |
 
-▶ [Watch the demo video on YouTube](https://youtu.be/52wZrd1oV24)
-
-A Unity starter project for building Android XR apps for XREAL AURA. The three sample scenes show how to render a 3D object, manipulate it with hand tracking, and add an interactive UI in 3D space. The project uses OpenXR, XR Interaction Toolkit, and the Universal Render Pipeline (URP).
+A Unity starter project for building Android XR apps for XREAL AURA. The five sample scenes show how to render a 3D object, manipulate it with hand tracking, add an interactive UI in 3D space, access the camera image, and hide virtual content behind real objects with occlusion. The project uses OpenXR, XR Interaction Toolkit, and the Universal Render Pipeline (URP).
 
 ## Sample scenes
 
@@ -17,6 +18,8 @@ Open these scenes from `Assets/Scenes` in the `OpenXR-Sample` Unity project.
 | [`0-ShowObject`](./OpenXR-Sample/Assets/Scenes/0-ShowObject.unity) | Look for a virtual cube in your surroundings. Start here to check that 3D content appears in the glasses. |
 | [`1-ObjectManipulation`](./OpenXR-Sample/Assets/Scenes/1-ObjectManipulation.unity) | Grab the cube with one hand to move and rotate it. Grab it with both hands and bring your hands closer together or farther apart to resize the cube while its position and rotation stay fixed. |
 | [`2-UI`](./OpenXR-Sample/Assets/Scenes/2-UI.unity) | Press the button on the world-space canvas to show or hide the cube. Select the text field and type with the spatial keyboard to update the label above the cube. |
+| [`3-CameraImage`](./OpenXR-Sample/Assets/Scenes/3-CameraImage.unity) | Grant the camera permission when asked, and the image from the device’s camera appears on a panel in your surroundings. The available cameras and the image size are shown on a label. |
+| [`4-Occlusion`](./OpenXR-Sample/Assets/Scenes/4-Occlusion.unity) | Real objects in front of the cube, such as a wall, hide the cube behind them. Grant the permission Android XR requires for occlusion when asked. |
 
 ## Sample scripts
 
@@ -27,6 +30,8 @@ The scripts in `Assets/Scripts` were written for this starter kit. You can reuse
 | [`TwoHandsScaleController.cs`](./OpenXR-Sample/Assets/Scripts/TwoHandsScaleController.cs) | Keeps the cube’s rotation fixed while you resize it with both hands and can also lock its position. |
 | [`ToggleCubeVisibility.cs`](./OpenXR-Sample/Assets/Scripts/ToggleCubeVisibility.cs) | Shows or hides the cube when the UI button is pressed. |
 | [`ShowInputText.cs`](./OpenXR-Sample/Assets/Scripts/ShowInputText.cs) | Updates the label above the cube as the text field changes. |
+| [`CameraAccess.cs`](./OpenXR-Sample/Assets/Scripts/CameraAccess.cs) | Requests the camera permission, lists the available cameras, shows the selected camera’s image on a renderer, and logs the results to an optional label. |
+| [`OcclusionEnabler.cs`](./OpenXR-Sample/Assets/Scripts/OcclusionEnabler.cs) | Turns on the AR Occlusion Manager after the user grants the permission Android XR requires for occlusion. |
 
 ## Requirements
 

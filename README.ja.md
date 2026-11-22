@@ -2,11 +2,12 @@
 
 [English](./README.md)
 
-[![Android XR スターターサンプルのデモ動画（YouTube）](https://img.youtube.com/vi/52wZrd1oV24/maxresdefault.jpg)](https://youtu.be/52wZrd1oV24)
+| ver.1：シーン 0〜2 | ver.2：シーン 3〜4 |
+| --- | --- |
+| [![Android XR スターターサンプルのデモ動画（YouTube）](https://img.youtube.com/vi/52wZrd1oV24/maxresdefault.jpg)](https://youtu.be/52wZrd1oV24) | [![Android XR スターターサンプル ver.2 のデモ動画（YouTube）](https://img.youtube.com/vi/tw9fotn9uPU/maxresdefault.jpg)](https://youtu.be/tw9fotn9uPU) |
+| ▶ [デモ動画を YouTube で見る](https://youtu.be/52wZrd1oV24) | ▶ [デモ動画を YouTube で見る](https://youtu.be/tw9fotn9uPU) |
 
-▶ [デモ動画を YouTube で見る](https://youtu.be/52wZrd1oV24)
-
-XREAL AURA 向けの Android XR アプリ開発を始めるための Unity プロジェクトです。3 つのサンプルシーンで、3D オブジェクトの表示、ハンドトラッキングによる操作、空間 UI の実装を試せます。OpenXR、XR Interaction Toolkit、Universal Render Pipeline（URP）を使用しています。
+XREAL AURA 向けの Android XR アプリ開発を始めるための Unity プロジェクトです。5 つのサンプルシーンで、3D オブジェクトの表示、ハンドトラッキングによる操作、空間 UI の実装、カメラ画像へのアクセス、実物による仮想オブジェクトの遮蔽（オクルージョン）を試せます。OpenXR、XR Interaction Toolkit、Universal Render Pipeline（URP）を使用しています。
 
 ## サンプルシーン
 
@@ -17,6 +18,8 @@ XREAL AURA 向けの Android XR アプリ開発を始めるための Unity プ�
 | [`0-ShowObject`](./OpenXR-Sample/Assets/Scenes/0-ShowObject.unity) | 周囲の空間に仮想のキューブを表示します。まずこのシーンで、グラスに 3D オブジェクトが表示されることを確認できます。 |
 | [`1-ObjectManipulation`](./OpenXR-Sample/Assets/Scenes/1-ObjectManipulation.unity) | 片手でキューブをつかんで移動・回転できます。両手でつかんで手の間隔を変えると、位置と向きを保ったまま拡大・縮小できます。 |
 | [`2-UI`](./OpenXR-Sample/Assets/Scenes/2-UI.unity) | ワールド空間の Canvas にあるボタンでキューブの表示・非表示を切り替えます。入力欄を選んで空間キーボードで文字を入力すると、キューブの上のラベルに反映されます。 |
+| [`3-CameraImage`](./OpenXR-Sample/Assets/Scenes/3-CameraImage.unity) | カメラの権限を許可すると、デバイスのカメラ映像が周囲の空間のパネルに表示されます。利用できるカメラの一覧と画像サイズも、ラベルに表示します。 |
+| [`4-Occlusion`](./OpenXR-Sample/Assets/Scenes/4-Occlusion.unity) | キューブの手前に壁のような実物があると、キューブがその後ろに隠れます。Android XR がオクルージョンに必要とする権限は、求められたときに許可してください。 |
 
 ## サンプルスクリプト
 
@@ -27,6 +30,8 @@ XREAL AURA 向けの Android XR アプリ開発を始めるための Unity プ�
 | [`TwoHandsScaleController.cs`](./OpenXR-Sample/Assets/Scripts/TwoHandsScaleController.cs) | 両手で拡大・縮小している間はキューブの向きを固定し、設定に応じて位置も固定します。 |
 | [`ToggleCubeVisibility.cs`](./OpenXR-Sample/Assets/Scripts/ToggleCubeVisibility.cs) | UI のボタンを押すと、キューブの表示・非表示を切り替えます。 |
 | [`ShowInputText.cs`](./OpenXR-Sample/Assets/Scripts/ShowInputText.cs) | 入力欄の文字が変わるたびに、キューブの上のラベルを更新します。 |
+| [`CameraAccess.cs`](./OpenXR-Sample/Assets/Scripts/CameraAccess.cs) | カメラの権限を要求し、利用できるカメラを一覧にして、選択したカメラの画像を Renderer に表示します。結果は任意のラベルにも出力します。 |
+| [`OcclusionEnabler.cs`](./OpenXR-Sample/Assets/Scripts/OcclusionEnabler.cs) | Android XR がオクルージョンに必要とする権限をユーザーが許可したあとで、AR Occlusion Manager を有効にします。 |
 
 ## 必要な環境
 
