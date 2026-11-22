@@ -4,8 +4,8 @@
 
 | ver.1：シーン 0〜2 | ver.2：シーン 3〜4 |
 | --- | --- |
-| [![Android XR スターターサンプルのデモ動画（YouTube）](https://img.youtube.com/vi/52wZrd1oV24/maxresdefault.jpg)](https://youtu.be/52wZrd1oV24) | [![Android XR スターターサンプル ver.2 のデモ動画（YouTube）](https://img.youtube.com/vi/tw9fotn9uPU/maxresdefault.jpg)](https://youtu.be/tw9fotn9uPU) |
-| ▶ [デモ動画を YouTube で見る](https://youtu.be/52wZrd1oV24) | ▶ [デモ動画を YouTube で見る](https://youtu.be/tw9fotn9uPU) |
+| [![Android XR スターターサンプルのデモ動画（YouTube）](https://img.youtube.com/vi/52wZrd1oV24/maxresdefault.jpg)](https://youtu.be/52wZrd1oV24) | [![Android XR スターターサンプル ver.2 のデモ動画（YouTube）](https://img.youtube.com/vi/PcOjSbCRSmc/maxresdefault.jpg)](https://youtu.be/PcOjSbCRSmc) |
+| ▶ [デモ動画を YouTube で見る](https://youtu.be/52wZrd1oV24) | ▶ [デモ動画を YouTube で見る](https://youtu.be/PcOjSbCRSmc) |
 
 XREAL AURA 向けの Android XR アプリ開発を始めるための Unity プロジェクトです。5 つのサンプルシーンで、3D オブジェクトの表示、ハンドトラッキングによる操作、空間 UI の実装、カメラ画像へのアクセス、実物による仮想オブジェクトの遮蔽（オクルージョン）を試せます。OpenXR、XR Interaction Toolkit、Universal Render Pipeline（URP）を使用しています。
 
@@ -19,7 +19,7 @@ XREAL AURA 向けの Android XR アプリ開発を始めるための Unity プ�
 | [`1-ObjectManipulation`](./OpenXR-Sample/Assets/Scenes/1-ObjectManipulation.unity) | 片手でキューブをつかんで移動・回転できます。両手でつかんで手の間隔を変えると、位置と向きを保ったまま拡大・縮小できます。 |
 | [`2-UI`](./OpenXR-Sample/Assets/Scenes/2-UI.unity) | ワールド空間の Canvas にあるボタンでキューブの表示・非表示を切り替えます。入力欄を選んで空間キーボードで文字を入力すると、キューブの上のラベルに反映されます。 |
 | [`3-CameraImage`](./OpenXR-Sample/Assets/Scenes/3-CameraImage.unity) | カメラの権限を許可すると、デバイスのカメラ映像が周囲の空間のパネルに表示されます。利用できるカメラの一覧と画像サイズも、ラベルに表示します。 |
-| [`4-Occlusion`](./OpenXR-Sample/Assets/Scenes/4-Occlusion.unity) | キューブの手前に壁のような実物があると、キューブがその後ろに隠れます。Android XR がオクルージョンに必要とする権限は、求められたときに許可してください。 |
+| [`4-Occlusion`](./OpenXR-Sample/Assets/Scenes/4-Occlusion.unity) | 壁のような実物は、その後ろにあるキューブを隠します。`1-ObjectManipulation` と同じ操作でキューブを壁にめり込ませると、壁の中に入った部分が隠れます。Android XR がオクルージョンに必要とする権限は、求められたときに許可してください。 |
 
 ## サンプルスクリプト
 

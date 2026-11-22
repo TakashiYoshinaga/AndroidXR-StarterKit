@@ -4,8 +4,8 @@
 
 | ver.1: scenes 0–2 | ver.2: scenes 3–4 |
 | --- | --- |
-| [![Android XR Starter Sample demo video](https://img.youtube.com/vi/52wZrd1oV24/maxresdefault.jpg)](https://youtu.be/52wZrd1oV24) | [![Android XR Starter Sample ver.2 demo video](https://img.youtube.com/vi/tw9fotn9uPU/maxresdefault.jpg)](https://youtu.be/tw9fotn9uPU) |
-| ▶ [Watch the demo video on YouTube](https://youtu.be/52wZrd1oV24) | ▶ [Watch the demo video on YouTube](https://youtu.be/tw9fotn9uPU) |
+| [![Android XR Starter Sample demo video](https://img.youtube.com/vi/52wZrd1oV24/maxresdefault.jpg)](https://youtu.be/52wZrd1oV24) | [![Android XR Starter Sample ver.2 demo video](https://img.youtube.com/vi/PcOjSbCRSmc/maxresdefault.jpg)](https://youtu.be/PcOjSbCRSmc) |
+| ▶ [Watch the demo video on YouTube](https://youtu.be/52wZrd1oV24) | ▶ [Watch the demo video on YouTube](https://youtu.be/PcOjSbCRSmc) |
 
 A Unity starter project for building Android XR apps for XREAL AURA. The five sample scenes show how to render a 3D object, manipulate it with hand tracking, add an interactive UI in 3D space, access the camera image, and hide virtual content behind real objects with occlusion. The project uses OpenXR, XR Interaction Toolkit, and the Universal Render Pipeline (URP).
 
@@ -19,7 +19,7 @@ Open these scenes from `Assets/Scenes` in the `OpenXR-Sample` Unity project.
 | [`1-ObjectManipulation`](./OpenXR-Sample/Assets/Scenes/1-ObjectManipulation.unity) | Grab the cube with one hand to move and rotate it. Grab it with both hands and bring your hands closer together or farther apart to resize the cube while its position and rotation stay fixed. |
 | [`2-UI`](./OpenXR-Sample/Assets/Scenes/2-UI.unity) | Press the button on the world-space canvas to show or hide the cube. Select the text field and type with the spatial keyboard to update the label above the cube. |
 | [`3-CameraImage`](./OpenXR-Sample/Assets/Scenes/3-CameraImage.unity) | Grant the camera permission when asked, and the image from the device’s camera appears on a panel in your surroundings. The available cameras and the image size are shown on a label. |
-| [`4-Occlusion`](./OpenXR-Sample/Assets/Scenes/4-Occlusion.unity) | Real objects in front of the cube, such as a wall, hide the cube behind them. Grant the permission Android XR requires for occlusion when asked. |
+| [`4-Occlusion`](./OpenXR-Sample/Assets/Scenes/4-Occlusion.unity) | Real objects such as walls hide the cube behind them. Move the cube into a wall as in `1-ObjectManipulation`, and the part inside the wall is hidden. Grant the permission Android XR requires for occlusion when asked. |
 
 ## Sample scripts
 
