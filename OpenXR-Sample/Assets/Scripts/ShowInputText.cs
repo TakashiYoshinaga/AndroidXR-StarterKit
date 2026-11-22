@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Takashi Yoshinaga. Licensed under the MIT License.
+
 using TMPro;
 using UnityEngine;
 

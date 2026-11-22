@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Takashi Yoshinaga. Licensed under the MIT License.
+
 using System.Collections;
 using System.Text;
 using TMPro;
