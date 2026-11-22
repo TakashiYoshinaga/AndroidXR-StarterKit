@@ -2,7 +2,7 @@
 
 [日本語](./README.ja.md)
 
-| ver.1: scenes 0–2 | ver.2: scenes 3–4 |
+| scenes 0–2 | scenes 3–4 |
 | --- | --- |
 | [![Android XR Starter Sample demo video](https://img.youtube.com/vi/52wZrd1oV24/maxresdefault.jpg)](https://youtu.be/52wZrd1oV24) | [![Android XR Starter Sample ver.2 demo video](https://img.youtube.com/vi/PcOjSbCRSmc/maxresdefault.jpg)](https://youtu.be/PcOjSbCRSmc) |
 | ▶ [Watch the demo video on YouTube](https://youtu.be/52wZrd1oV24) | ▶ [Watch the demo video on YouTube](https://youtu.be/PcOjSbCRSmc) |
