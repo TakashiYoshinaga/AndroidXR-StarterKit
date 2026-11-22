@@ -55,3 +55,5 @@ Add `AndroidXR-StarterKit/OpenXR-Sample` from disk in Unity Hub and open it. Let
 The original project code is released under the [MIT License](./LICENSE).
 
 Unity sample assets are included under `OpenXR-Sample/Assets/Samples`. See the respective package terms for [XR Interaction Toolkit](https://unity.com/legal/licenses/unity-companion-license) and [XR Hands](https://unity.com/legal/licenses/unity-package-distribution-license).
+
+The occlusion shaders in `OpenXR-Sample/Assets/Shaders/Occlusion` are copied unmodified from [AR Foundation Samples](https://github.com/Unity-Technologies/arfoundation-samples) (branch `6.6`) by Unity Technologies, and are licensed under the [Unity Companion License](https://unity.com/legal/licenses/unity-companion-license). See [`LICENSE.md`](./OpenXR-Sample/Assets/Shaders/Occlusion/LICENSE.md) in that folder.

@@ -55,3 +55,5 @@ Unity Hub で `AndroidXR-StarterKit/OpenXR-Sample` フォルダーをディス�
 本プロジェクトのオリジナルコードは [MIT License](./LICENSE) で公開しています。
 
 `OpenXR-Sample/Assets/Samples` に含まれる Unity のサンプルアセットについては、[XR Interaction Toolkit](https://unity.com/legal/licenses/unity-companion-license) と [XR Hands](https://unity.com/legal/licenses/unity-package-distribution-license) の各パッケージのライセンス条件を参照してください。
+
+`OpenXR-Sample/Assets/Shaders/Occlusion` のオクルージョン用シェーダーは、Unity Technologies の [AR Foundation Samples](https://github.com/Unity-Technologies/arfoundation-samples)（`6.6` ブランチ）から改変せずにコピーしたもので、[Unity Companion License](https://unity.com/legal/licenses/unity-companion-license) のもとで提供されています。詳細は同フォルダーの [`LICENSE.md`](./OpenXR-Sample/Assets/Shaders/Occlusion/LICENSE.md) を参照してください。
