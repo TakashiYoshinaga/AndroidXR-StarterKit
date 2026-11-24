@@ -2,12 +2,12 @@
 
 [日本語](./README.ja.md)
 
-| scenes 0–2 | scenes 3–4 |
+| scenes 0–2 | scenes 3–5 |
 | --- | --- |
-| [![Android XR Starter Sample demo video](https://img.youtube.com/vi/52wZrd1oV24/maxresdefault.jpg)](https://youtu.be/52wZrd1oV24) | [![Android XR Starter Sample ver.2 demo video](https://img.youtube.com/vi/PcOjSbCRSmc/maxresdefault.jpg)](https://youtu.be/PcOjSbCRSmc) |
-| ▶ [Watch the demo video on YouTube](https://youtu.be/52wZrd1oV24) | ▶ [Watch the demo video on YouTube](https://youtu.be/PcOjSbCRSmc) |
+| [![Android XR Starter Sample demo video](https://img.youtube.com/vi/52wZrd1oV24/maxresdefault.jpg)](https://youtu.be/52wZrd1oV24) | [![Android XR Starter Sample ver.2 demo video](https://i.ytimg.com/vi/FxXNzq-5ClU/maxresdefault.jpg)](https://youtu.be/FxXNzq-5ClU) |
+| ▶ [Watch the demo video on YouTube](https://youtu.be/52wZrd1oV24) | ▶ [Watch the demo video on YouTube](https://youtu.be/FxXNzq-5ClU) |
 
-A Unity starter project for building Android XR apps for XREAL AURA. The five sample scenes show how to render a 3D object, manipulate it with hand tracking, add an interactive UI in 3D space, access the camera image, and hide virtual content behind real objects with occlusion. The project uses OpenXR, XR Interaction Toolkit, and the Universal Render Pipeline (URP).
+A Unity starter project for building Android XR apps for XREAL AURA. The six sample scenes show how to render a 3D object, manipulate it with hand tracking, add an interactive UI in 3D space, access the camera image, hide virtual content behind real objects with occlusion, and recognize and track an image marker. The project uses OpenXR, XR Interaction Toolkit, and the Universal Render Pipeline (URP).
 
 ## Sample scenes
 
@@ -20,6 +20,7 @@ Open these scenes from `Assets/Scenes` in the `OpenXR-Sample` Unity project.
 | [`2-UI`](./OpenXR-Sample/Assets/Scenes/2-UI.unity) | Press the button on the world-space canvas to show or hide the cube. Select the text field and type with the spatial keyboard to update the label above the cube. |
 | [`3-CameraImage`](./OpenXR-Sample/Assets/Scenes/3-CameraImage.unity) | Grant the camera permission when asked, and the image from the device’s camera appears on a panel in your surroundings. The available cameras and the image size are shown on a label. |
 | [`4-Occlusion`](./OpenXR-Sample/Assets/Scenes/4-Occlusion.unity) | Real objects such as walls hide the cube behind them. Move the cube into a wall as in `1-ObjectManipulation`, and the part inside the wall is hidden. Grant the permission Android XR requires for occlusion when asked. |
+| [`5-ImageTracking`](./OpenXR-Sample/Assets/Scenes/5-ImageTracking.unity) | Show the marker image (`Assets/ImageTracking/Markers/logo.png`) on a screen, and the cube appears on it and follows its position and orientation. When the marker is lost, the cube stays where it was; you can set it to hide instead in the Inspector. Grant the permission Android XR requires for image tracking when asked. |
 
 ## Sample scripts
 
@@ -32,6 +33,8 @@ The scripts in `Assets/Scripts` were written for this starter kit. You can reuse
 | [`ShowInputText.cs`](./OpenXR-Sample/Assets/Scripts/ShowInputText.cs) | Updates the label above the cube as the text field changes. |
 | [`CameraAccess.cs`](./OpenXR-Sample/Assets/Scripts/CameraAccess.cs) | Requests the camera permission, lists the available cameras, shows the selected camera’s image on a renderer, and logs the results to an optional label. |
 | [`OcclusionEnabler.cs`](./OpenXR-Sample/Assets/Scripts/OcclusionEnabler.cs) | Turns on the AR Occlusion Manager after the user grants the permission Android XR requires for occlusion. |
+| [`ImageTrackingEnabler.cs`](./OpenXR-Sample/Assets/Scripts/ImageTrackingEnabler.cs) | Turns on the AR Tracked Image Manager after the user grants the permission Android XR requires for image tracking. |
+| [`TrackedImageFollower.cs`](./OpenXR-Sample/Assets/Scripts/TrackedImageFollower.cs) | Makes a target object follow one tracked image, chosen by its name in the reference image library. Add one per marker. |
 
 ## Requirements
 
