@@ -6,6 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes: []
   m_configObjects:
+    UnityEditor.XR.OpenXR.Features.SpatialEntities.SpatialEntitiesSettings: {fileID: 11400000, guid: 443bd5da89db4d84991e83c78f655aa2, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: d7302b73a7f2f2a4a9b2bd4f450ca67b, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 22adecf2951711f40af96e248263fc6c, type: 2}
