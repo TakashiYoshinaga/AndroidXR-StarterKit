@@ -50,10 +50,18 @@ git clone https://github.com/TakashiYoshinaga/AndroidXR-StarterKit.git
 
 Unity Hub で `AndroidXR-StarterKit/OpenXR-Sample` フォルダーをディスクから追加して開きます。初回はパッケージの取得とアセットのインポートが完了するまで待ちます。
 
+clone した直後のプロジェクトは、通常の **Android** プラットフォームで開きます。使用中のビルドプロファイルは、リポジトリに含まれない `Library` フォルダーに保存されるためです。このプラットフォームのままだと、Unity OpenXR Android XR パッケージが Android XR の機能の一部を無効にします。初回の起動後に一度だけ、同梱の **Android XR** プロファイルに切り替えます。
+
+1. **File → Build Profiles** を開き、**Build Profiles** の **Android XR** を選択します。[ビルドプロファイルのファイル](./OpenXR-Sample/Assets/Settings/Build%20Profiles/Android%20XR.asset)
+2. プロファイルに **Android XR is currently disabled** と表示されたら、**Enable Platform** をクリックします。続けて **Switch Profile** をクリックします。
+3. **Edit → Project Settings → XR Plug-in Management → OpenXR** を開き、**Android** タブで **Android XR Support**、**Hand Interaction Profile**、**Foveated Rendering** が有効になっているか確認します。無効のものがあれば有効にします。
+
+`Library` フォルダーを削除しないかぎり、この手順を繰り返す必要はありません。
+
 ## XREAL AURA でビルドして実行する
 
 1. Unity の **Project** ウィンドウで、`Assets/Scenes` から試したいシーンを開きます。最初は `0-ShowObject` を開きます。
-2. **File → Build Profiles** を開き、同梱の **Android XR** プロファイルを選択します。必要に応じて **Switch Profile** をクリックします。[ビルドプロファイルのファイル](./OpenXR-Sample/Assets/Settings/Build%20Profiles/Android%20XR.asset)
+2. **File → Build Profiles** を開き、同梱の **Android XR** プロファイルが使用中になっているか確認します。なっていなければ、[プロジェクトを開く](#プロジェクトを開く)の手順を行います。
 3. 初期状態ではビルド対象のシーン一覧は空です。プロファイルで **Add Settings → Scene List** を選び、**Add Open Scenes** をクリックします。一覧では起動したいシーンだけを有効にします。[Unity のシーン一覧ガイド](https://docs.unity3d.com/6000.3/Documentation/Manual/build-profile-scene-list.html)
 4. AURA の開発者向けオプションで **USB デバッグ**を有効にします。グラスを Compute Puck につないだ状態で、パソコンと Puck の充電ポートをデータ転送対応の USB-C ケーブルで接続します。実機に USB デバッグの確認が表示されたら許可します。[XREAL の実機セットアップガイド](https://tutorials.xreal.com/docs/aura/developers/getting-started/)
 5. **Run Device** で実機を選び、**Build and Run** をクリックして APK のビルド、インストール、起動を行います。別のサンプルを試すときは、そのシーンを一覧に追加し、そのシーンだけを有効にして再ビルドします。[Unity の Android ビルドガイド](https://docs.unity3d.com/6000.3/Documentation/Manual/android-BuildProcess.html)
