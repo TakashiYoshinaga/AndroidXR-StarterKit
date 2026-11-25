@@ -537,7 +537,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -659,7 +659,7 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: 0
+  m_TextStyleHashCode: -1183493901
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
@@ -889,9 +889,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AndroidXRStarterKit.GeospatialObjectPlacer
   _geospatialManager: {fileID: 2032065607}
   _target: {fileID: 598816716}
-  _latitude: 35.681236
-  _longitude: 139.767125
-  _altitude: 40
+  _latitude: 35.661112145903225
+  _longitude: 139.7439590575198
+  _altitude: 70
 --- !u!114 &2032065606
 MonoBehaviour:
   m_ObjectHideFlags: 0
