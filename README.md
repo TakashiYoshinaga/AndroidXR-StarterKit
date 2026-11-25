@@ -52,8 +52,11 @@ Add `AndroidXR-StarterKit/OpenXR-Sample` from disk in Unity Hub and open it. Let
 
 A fresh clone opens on the regular **Android** platform, because the active build profile is saved in the `Library` folder, which isn’t part of the repository. While the project is on that platform, the Unity OpenXR Android XR package turns off some of the Android XR features. After the first launch, switch to the included **Android XR** profile once:
 
-1. Go to **File → Build Profiles** and select **Android XR** under **Build Profiles**. [Build profile asset](./OpenXR-Sample/Assets/Settings/Build%20Profiles/Android%20XR.asset)
+1. Go to **File → Build Profiles** and select **Android XR** under **Build Profiles**.
 2. If the profile shows **Android XR is currently disabled**, click **Enable Platform**. Then click **Switch Profile**.
+
+   <img src="./docs/images/enable-android-xr-platform.png" alt="Build Profiles window with the Android XR profile selected, showing Android XR is currently disabled and the Enable Platform button" width="600">
+
 3. Go to **Edit → Project Settings → XR Plug-in Management → OpenXR**, open the **Android** tab, and check that **Android XR Support**, **Hand Interaction Profile**, and **Foveated Rendering** are turned on. Turn on any that are off.
 
 You only need to do this again if you delete the `Library` folder.

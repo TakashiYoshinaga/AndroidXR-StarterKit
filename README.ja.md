@@ -52,8 +52,11 @@ Unity Hub で `AndroidXR-StarterKit/OpenXR-Sample` フォルダーをディス�
 
 clone した直後のプロジェクトは、通常の **Android** プラットフォームで開きます。使用中のビルドプロファイルは、リポジトリに含まれない `Library` フォルダーに保存されるためです。このプラットフォームのままだと、Unity OpenXR Android XR パッケージが Android XR の機能の一部を無効にします。初回の起動後に一度だけ、同梱の **Android XR** プロファイルに切り替えます。
 
-1. **File → Build Profiles** を開き、**Build Profiles** の **Android XR** を選択します。[ビルドプロファイルのファイル](./OpenXR-Sample/Assets/Settings/Build%20Profiles/Android%20XR.asset)
+1. **File → Build Profiles** を開き、**Build Profiles** の **Android XR** を選択します。
 2. プロファイルに **Android XR is currently disabled** と表示されたら、**Enable Platform** をクリックします。続けて **Switch Profile** をクリックします。
+
+   <img src="./docs/images/enable-android-xr-platform.png" alt="Android XR プロファイルを選択した Build Profiles ウィンドウ。Android XR is currently disabled と Enable Platform ボタンが表示されている" width="600">
+
 3. **Edit → Project Settings → XR Plug-in Management → OpenXR** を開き、**Android** タブで **Android XR Support**、**Hand Interaction Profile**、**Foveated Rendering** が有効になっているか確認します。無効のものがあれば有効にします。
 
 `Library` フォルダーを削除しないかぎり、この手順を繰り返す必要はありません。
