@@ -7,7 +7,7 @@
 | [![Android XR スターターサンプルのデモ動画（YouTube）](https://img.youtube.com/vi/52wZrd1oV24/maxresdefault.jpg)](https://youtu.be/52wZrd1oV24) | [![Android XR スターターサンプル ver.2 のデモ動画（YouTube）](https://i.ytimg.com/vi/FxXNzq-5ClU/maxresdefault.jpg)](https://youtu.be/FxXNzq-5ClU) |
 | ▶ [デモ動画を YouTube で見る](https://youtu.be/52wZrd1oV24) | ▶ [デモ動画を YouTube で見る](https://youtu.be/FxXNzq-5ClU) |
 
-XREAL AURA 向けの Android XR アプリ開発を始めるための Unity プロジェクトです。6 つのサンプルシーンで、3D オブジェクトの表示、ハンドトラッキングによる操作、空間 UI の実装、カメラ画像へのアクセス、実物による仮想オブジェクトの遮蔽（オクルージョン）、画像マーカーの認識と追跡を試せます。OpenXR、XR Interaction Toolkit、Universal Render Pipeline（URP）を使用しています。
+XREAL AURA 向けの Android XR アプリ開発を始めるための Unity プロジェクトです。7 つのサンプルシーンで、3D オブジェクトの表示、ハンドトラッキングによる操作、空間 UI の実装、カメラ画像へのアクセス、実物による仮想オブジェクトの遮蔽（オクルージョン）、画像マーカーの認識と追跡、Geospatial API による緯度・経度を指定したオブジェクトの配置を試せます。OpenXR、XR Interaction Toolkit、Universal Render Pipeline（URP）を使用しています。
 
 ## サンプルシーン
 
@@ -21,6 +21,7 @@ XREAL AURA 向けの Android XR アプリ開発を始めるための Unity プ�
 | [`3-CameraImage`](./OpenXR-Sample/Assets/Scenes/3-CameraImage.unity) | カメラの権限を許可すると、デバイスのカメラ映像が周囲の空間のパネルに表示されます。利用できるカメラの一覧と画像サイズも、ラベルに表示します。 |
 | [`4-Occlusion`](./OpenXR-Sample/Assets/Scenes/4-Occlusion.unity) | 壁のような実物は、その後ろにあるキューブを隠します。`1-ObjectManipulation` と同じ操作でキューブを壁にめり込ませると、壁の中に入った部分が隠れます。Android XR がオクルージョンに必要とする権限は、求められたときに許可してください。 |
 | [`5-ImageTracking`](./OpenXR-Sample/Assets/Scenes/5-ImageTracking.unity) | 画面などに表示したマーカー画像（`Assets/ImageTracking/Markers/logo.png`）を認識すると、その上にキューブが現れ、マーカーの位置と向きに追従します。マーカーを見失ったときは、キューブがその場にとどまります（Inspector で、隠す設定にもできます）。Android XR が画像トラッキングに必要とする権限は、求められたときに許可してください。 |
+| [`6-GeoSpatial`](./OpenXR-Sample/Assets/Scenes/6-GeoSpatial.unity) | シーンで指定した緯度・経度・高度にキューブが現れます。目の前のラベルに、Geospatial の状態と、自分の緯度・経度・高度とその精度が表示されます。建物が見える屋外で試し、位置情報の権限を求められたら許可してください。このシーンには Google Cloud のプロジェクトが必要です。[Geospatial API を使う](#geospatial-api-を使う)を参照してください。 |
 
 ## サンプルスクリプト
 
@@ -35,12 +36,16 @@ XREAL AURA 向けの Android XR アプリ開発を始めるための Unity プ�
 | [`OcclusionEnabler.cs`](./OpenXR-Sample/Assets/Scripts/OcclusionEnabler.cs) | Android XR がオクルージョンに必要とする権限をユーザーが許可したあとで、AR Occlusion Manager を有効にします。 |
 | [`ImageTrackingEnabler.cs`](./OpenXR-Sample/Assets/Scripts/ImageTrackingEnabler.cs) | Android XR が画像トラッキングに必要とする権限をユーザーが許可したあとで、AR Tracked Image Manager を有効にします。 |
 | [`TrackedImageFollower.cs`](./OpenXR-Sample/Assets/Scripts/TrackedImageFollower.cs) | 参照画像ライブラリでの名前で選んだ 1 枚の追跡画像に、対象のオブジェクトを追従させます。マーカーごとに 1 つ追加します。 |
+| [`GeospatialEnabler.cs`](./OpenXR-Sample/Assets/Scripts/GeospatialEnabler.cs) | 位置情報の権限をユーザーが許可したあとで、XR Geospatial Manager を有効にします。 |
+| [`GeospatialObjectPlacer.cs`](./OpenXR-Sample/Assets/Scripts/GeospatialObjectPlacer.cs) | 対象のオブジェクトを、指定した緯度・経度・高度に置きます。デバイスの位置と向きの精度が Inspector で設定した閾値以内のときだけ、位置を更新します。 |
+| [`GeospatialStatusLabel.cs`](./OpenXR-Sample/Assets/Scripts/GeospatialStatusLabel.cs) | Geospatial の状態と、デバイスの緯度・経度・高度とその精度をラベルに表示します。 |
 
 ## 必要な環境
 
 - Unity Hub と Unity 6.3 LTS（`6000.3.7f1`）。[Unity エディターのダウンロード](https://unity.com/releases/editor/whats-new/6000.3.7f1)
 - Unity Hub で **Android Build Support** と、その配下の **Android SDK & NDK Tools**、**OpenJDK** をインストールしてください。[Android XR 向け Unity プロジェクトの設定](https://developer.android.com/develop/xr/unity/setup?hl=ja)
 - 実機で試すには、XREAL AURA グラス、Compute Puck、データ転送対応の USB-C ケーブルが必要です。
+- `6-GeoSpatial` を試す場合だけ、ARCore API を有効にした Google Cloud のプロジェクトが必要です。[Geospatial API を使う](#geospatial-api-を使う)を参照してください。
 
 ## プロジェクトを開く
 
@@ -68,6 +73,20 @@ clone した直後のプロジェクトは、通常の **Android** プラット�
 3. 初期状態ではビルド対象のシーン一覧は空です。プロファイルで **Add Settings → Scene List** を選び、**Add Open Scenes** をクリックします。一覧では起動したいシーンだけを有効にします。[Unity のシーン一覧ガイド](https://docs.unity3d.com/6000.3/Documentation/Manual/build-profile-scene-list.html)
 4. AURA の開発者向けオプションで **USB デバッグ**を有効にします。グラスを Compute Puck につないだ状態で、パソコンと Puck の充電ポートをデータ転送対応の USB-C ケーブルで接続します。実機に USB デバッグの確認が表示されたら許可します。[XREAL の実機セットアップガイド](https://tutorials.xreal.com/docs/aura/developers/getting-started/)
 5. **Run Device** で実機を選び、**Build and Run** をクリックして APK のビルド、インストール、起動を行います。別のサンプルを試すときは、そのシーンを一覧に追加し、そのシーンだけを有効にして再ビルドします。[Unity の Android ビルドガイド](https://docs.unity3d.com/6000.3/Documentation/Manual/android-BuildProcess.html)
+
+## Geospatial API を使う
+
+`6-GeoSpatial` は、パッケージとしてインストールされる [Android XR Extensions for Unity](https://github.com/android/android-xr-unity-package) の Geospatial API を使います。この API は、Google Cloud 経由で Google の Visual Positioning System（VPS）を使ってデバイスの位置を求めます。そのため、シーンをビルドする前に Google Cloud のプロジェクトを設定します。
+
+1. [Google Cloud コンソール](https://console.cloud.google.com/)でプロジェクトを作成または選択し、[ARCore API](https://console.cloud.google.com/apis/library/arcore.googleapis.com) を有効にします。
+2. **API とサービス → 認証情報**を開き、**認証情報を作成 → API キー**をクリックします。作成したキーを開き、**API の制限**で**キーを制限**を選んで **ARCore API** を選択します。キーをこのアプリだけで使えるようにするには、**アプリケーションの制限**で **Android アプリ**を選び、パッケージ名 `com.UnityTechnologies.com.unity.template.urpblank` と、ビルドに署名する証明書の SHA-1 フィンガープリントを追加します。開発用のビルドは、Android のデバッグ用キーストア（ホームフォルダーの `.android/debug.keystore`）で署名されます。
+3. Unity で **Edit → Project Settings → XR Plug-in Management → OpenXR** を開き、**Android** タブで **Android XR: Google Cloud** の歯車アイコンをクリックします。**Authentication Strategy** を **API Key** にし、**Credential** にキーを貼り付けます。初期設定の **Keyless** は、キーの代わりに Google Cloud の OAuth クライアントを使う方式です。
+4. `6-GeoSpatial` を開いて **GeospatialController** を選択します。**Geospatial Object Placer** の **Latitude** と **Longitude** に、キューブを置きたい場所の緯度・経度を入力します。**Altitude** は海抜ではなく、WGS84 楕円体からの高さです。置きたい場所の近くでラベルに表示される自分の高度を読み、それより 1.5 m ほど低い値を入力すると、キューブが地面の近くに置かれます。
+5. [XREAL AURA でビルドして実行する](#xreal-aura-でビルドして実行する)の手順でシーンをビルドして実行し、建物や道路が見える屋外で試します。ラベルに **Geospatial: Running** と、自分の位置の精度が表示されます。
+
+キューブの位置が更新されるのは、ラベルの水平の精度（H）と向きの精度（Yaw）が、**Geospatial Object Placer** の **Max Horizontal Accuracy** と **Max Yaw Accuracy** 以内のときだけです。それ以外のときは、キューブはその場にとどまります。キューブがいつまでも現れないときは、ラベルの値と比べて閾値を大きくしてください。VPS は Google ストリートビューの画像がある場所で使えます。それ以外の場所では、十分な精度が得られないことがあります。
+
+**API キーはリポジトリに入れないでください。** Unity はキーを `OpenXR-Sample/Assets/XR/Settings/OpenXR Package Settings.asset` に保存します。キーが入った状態のこのファイルは、コミットや共有をしないでください。
 
 ## ライセンス
 
