@@ -1,5 +1,16 @@
 {
   "dependencies": {
+    "com.google.xr.extensions": {
+      "version": "https://github.com/android/android-xr-unity-package.git#v1.5.0",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.xr.openxr": "1.18.0",
+        "com.unity.xr.arfoundation": "6.4.0",
+        "com.unity.xr.management": "4.7.0"
+      },
+      "hash": "b18fccf979d64cc4849b5ae34b9b2b1710cb9059"
+    },
     "com.unity.ai.navigation": {
       "version": "2.0.9",
       "depth": 0,
@@ -291,7 +302,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.xr.management": {
-      "version": "4.5.3",
+      "version": "4.7.0",
       "depth": 1,
       "source": "registry",
       "dependencies": {
